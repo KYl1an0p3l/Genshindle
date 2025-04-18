@@ -42,7 +42,8 @@ if (!isset($_COOKIE['serie'])){
             <h1>Genshindle</h1>
             <a href="connexion.php"><img id ='con_img' src="../icones/connexion.jpg"></a>
             <img id ='ser_img' src="../icones/flamme.png" title="Série de victoire, le cooldown se réinitialise à chaque réussite, vous avez 3 minutes pour deviner sans briser la chaîne">
-            <p id ='ser_txt'><?php echo $_COOKIE['serie']; ?></p>
+            <p id ='ser_txt'>
+                <?php if(isset($_COOKIE['serie'])) {echo $_COOKIE['serie'];} else{echo 0;} ?></p>
         </div>
         <input type="text" id="chartxt" placeholder="Nom d'un personnage">
         <ul id="nameSuggestions"></ul>
