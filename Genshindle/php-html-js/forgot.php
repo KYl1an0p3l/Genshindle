@@ -1,38 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 
 <head>
-
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Genshindle - Forgot Password </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/forgot.css">
-
-
-    <title>Forgot Password </title>
 </head>
 
 <body>
-    <a href="Genshindle.php"><img id='home_img' src="../icones/home.png"></a>
-    <main>
-        <div class="card">
-            <p class="lock-icon"><i class='bx bxs-lock-alt'></i></p>
-            <h2>Forgot Password?</h2>
-            <p>You can reset your Password here</p>
-            <input type="text" class="passInput" placeholder="Email address" required>
-            <div class="button">
-                <input type="submit" value="Send my Password to My Mail" required>
+<a href="Genshindle.php"><img id='home_img' src="../icones/home.png"></a>
+<main>
+    <form class="ring" method="post" action="#">
+        <i style="--clr:#00ff0a;"></i>
+        <i style="--clr:#ff0057;"></i>
+        <i style="--clr:#fffd44;"></i>
+        <div class="forgot">
+            <h2>Forgot password</h2>
+            <div class="inputB">
+                <input type="text" name="email" placeholder="Email" required>
             </div>
+            <div class="inputB">
+                <input type="submit" name="send" value="Reset my password">
+            </div>
+
         </div>
-    </main>
+    </form>
+    <a href="Genshindle.php" id="home_link">
+        <img id='home_img' src="../icones/home.png">
+    </a>
+</main>
 </body>
 
 </html>
+
+

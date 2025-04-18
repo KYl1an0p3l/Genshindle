@@ -1,79 +1,113 @@
+main {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
 }
 
 body {
-    background-color: #ff99f5;
-    background-image:
-        radial-gradient(at 61% 4%, hsla(303, 91%, 61%, 1) 0px, transparent 50%),
-        radial-gradient(at 75% 66%, hsla(196, 91%, 79%, 1) 0px, transparent 50%),
-        radial-gradient(at 98% 88%, hsla(76, 87%, 78%, 1) 0px, transparent 50%),
-        radial-gradient(at 23% 16%, hsla(238, 96%, 77%, 1) 0px, transparent 50%),
-        radial-gradient(at 95% 65%, hsla(13, 91%, 75%, 1) 0px, transparent 50%),
-        radial-gradient(at 10% 79%, hsla(228, 96%, 69%, 1) 0px, transparent 50%),
-        radial-gradient(at 85% 58%, hsla(328, 81%, 68%, 1) 0px, transparent 50%);
-    background-repeat: no-repeat;
+    background: #111;
+    width: 100%;
+    overflow: hidden;
+}
+
+.conditions label {
     color: white;
+    width: 100%;
+    box-sizing: content-box;
+}
+
+
+.ring {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 15rem 0;
-}
-
-.card {
-    backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 30px 40px;
 }
 
-.lock-icon {
-    font-size: 3rem;
+.ring i {
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+    border: 6px solid var(--clr);
+    filter: drop-shadow(0 0 20px var(--clr));
 }
 
-h2 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-    text-transform: uppercase;
+.ring i:nth-child(1) {
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    animation: animate 6s linear infinite;
 }
 
-p {
-    font-size: 12px;
+.ring i:nth-child(2) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate 4s linear infinite;
 }
 
-.card {
+.ring i:nth-child(3) {
+    border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+    animation: animate2 10s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.forgot {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     gap: 20px;
 }
 
-.passInput {
-    margin-top: 15px;
-    width: 80%;
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid deepskyblue;
-    font-size: 15px;
-    color: white;
-    outline: none;
-}
-
-.card h2 {
+.forgot h2 {
     font-size: 2em;
     color: #fff;
 }
 
-.card .button {
+.forgot .inputB {
     position: relative;
     width: 100%;
 }
 
-.card .button input {
+.forgot .inputB input {
     position: relative;
     width: 100%;
     padding: 12px 20px;
@@ -86,7 +120,7 @@ p {
     outline: none;
 }
 
-.card .button input[type="submit"] {
+.forgot .inputB input[type="submit"] {
     width: 100%;
     background: #0078ff;
     background: linear-gradient(45deg, #ff357a, #fff172);
@@ -94,11 +128,11 @@ p {
     cursor: pointer;
 }
 
-.card .button input::placeholder {
+.forgot .inputB input::placeholder {
     color: rgba(255, 255, 255, 0.75);
 }
 
-.card .links {
+.forgot .links {
     position: relative;
     width: 100%;
     display: flex;
@@ -107,7 +141,7 @@ p {
     padding: 0 20px;
 }
 
-.card .links a {
+.forgot .links a {
     color: #fff;
     text-decoration: none;
 }
@@ -119,4 +153,13 @@ p {
     height: 40px;
     left: 20px;
     top: 20px;
+}
+
+#messages {
+    position : absolute;
+    bottom : 0px;
+    color: white;
+    background-color: red; /* Choisissez une couleur de fond appropriée */
+    padding: 10px;
+    margin-top: 10px; /* Ajustez la marge pour l'espacement par rapport au formulaire */
 }
