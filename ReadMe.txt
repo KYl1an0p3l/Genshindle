@@ -12,8 +12,10 @@ Les fonctionnalités principales :
 - Un système d'anticipation du personnage que l'utilisateur veut entrer.
 
 Instructions d'installation et d'exécution :
-- Importer le projet sur 
-
+- Importer le projet présent sur https://github.com/KYl1an0p3l/Genshindle.
+- Importer la base de donnée présente sous la forme d'un fichier .sql sur son phpMyAdmin avec le nom genshindle.
+- Eventuellement changer les valeurs des identifiants et mot de passe présentes dans la connexion automatique à la base de donnée pour qu'ils correspondent à votre identifiant et mot de passe phpMyAdmin (id de base : root | mdp de base : root).
+- Jouer
 
 Compte 1er aux scores :
 id - Max
